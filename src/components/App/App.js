@@ -1,5 +1,6 @@
 import React from 'react';
 import Display from '../Display/Display';
+import './App.css';
 
 class App extends React.Component {
   render() {

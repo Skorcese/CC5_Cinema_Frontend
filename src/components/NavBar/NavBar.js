@@ -11,24 +11,26 @@ class NavBar extends React.Component {
             <i className="video icon"></i>
             <i className="fast forward icon"></i>
           </div>
-          <button>
+          <div className="ui basic buttons">
+          <button className="ui button">
             <Link to="/">HomePage</Link>
           </button>
-          <button>
+          <button className="ui button">
             <Link to="/pricelist">Cennik</Link>
           </button>
-          <button>
+          <button className="ui button">
             <Link to="/mytickets">Moje bilety</Link>
           </button>
-          <button>
+          <button className="ui button">
             <Link to="/contact">Kontakt</Link>
           </button>
-          <button>
+          <button className="ui button">
             <Link to="/register">Rejestracja</Link>
           </button>
-          <button>
+          <button className="ui button">
             <Link to="/login">Login</Link>
           </button>
+          </div>
         </div>
       </div>
     );
