@@ -1,3 +1,7 @@
-const x = () => 'api'
+import axios from 'axios';
 
-export default x;
+const end = axios.create({
+  baseURL: 'http://localhost:3000'
+});
+
+export default end;
