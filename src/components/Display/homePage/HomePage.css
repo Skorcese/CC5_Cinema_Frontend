@@ -20,6 +20,42 @@ hr {
     color: rgb(180, 180, 255);
 }
 
+.photo-home {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10%;
+    margin-bottom: 10px;
+}
+
+.ins-img {
+    height: 150px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .photo-home {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 5% 2%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .photo-home {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5% 20%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .photo-home {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 1% 0%;
+    }
+}
 /* font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Public Sans', sans-serif;
 font-family: 'Archivo Narrow', sans-serif;
