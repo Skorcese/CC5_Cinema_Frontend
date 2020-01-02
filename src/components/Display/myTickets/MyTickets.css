@@ -1,0 +1,8 @@
+.myTickets-wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: lightblue;
+  padding: 10px;
+}
