@@ -1,27 +1,28 @@
-.big-footer{
-    height: 280px;
-    background-color: rgb(24, 24, 24);
-    border-top: 1px solid rgb(68, 68, 68);
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10%;
-    text-align: center;
-    padding: 2%;
+.big-footer {
+  height: 280px;
+  background-color: rgb(24, 24, 24);
+  border-top: 1px solid rgb(68, 68, 68);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10%;
+  text-align: center;
+  padding: 2%;
+  margin-top: 50px;
 }
 
 .contact {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .contact:hover {
-    color: rgb(156, 156, 156);
+  color: rgb(156, 156, 156);
 }
 
 @media screen and (max-width: 660px) {
-    .big-footer {
-        display: grid;
-        grid-template-columns: auto;
-        grid-gap: 4%;
-        height: 540px;
-    }
+  .big-footer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 4%;
+    height: 540px;
+  }
 }
