@@ -1,0 +1,34 @@
+.contact-con {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5%;
+    text-align: center;
+    margin: 20% 0%;
+}
+
+#icon-contact{
+    font-size: 80px;
+    color: rgb(157, 157, 255);
+}
+
+.grid-email {
+    border-right: 2px solid rgb(157, 157, 255);
+    padding-right: 5%;
+}
+
+.h1-contact{
+    color: rgb(157, 157, 255);
+}
+
+@media screen and (max-width: 1000px) {
+    .contact-con{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 15%;
+    }
+    .grid-email {
+        border-right: none;
+        padding-bottom: 5%;
+        border-bottom: 2px solid rgb(157, 157, 255);
+    }
+}
