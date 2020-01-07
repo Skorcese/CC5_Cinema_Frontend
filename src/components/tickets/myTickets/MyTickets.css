@@ -1,0 +1,116 @@
+.page-wrapper {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  width: 90%;
+  gap: 20px;
+  color: #232121;
+}
+
+.tickets-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content;
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+  background-color: ghostwhite;
+  font-size: 17px;
+  border: 2px solid gray;
+  border-radius: 2%;
+}
+
+.moviePoster {
+  width: 100%;
+  height: fit-content;
+  border: transparent;
+  border-bottom: 2px solid white;
+  border-radius: 2% 2% 0 0;
+}
+
+.movieTitle {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.description {
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+.utils {
+  padding: 0 10px;
+}
+
+.utils span {
+  font-weight: bold;
+}
+
+.utils .seat {
+  margin-bottom: 10px;
+}
+
+.zeroTickets {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.7;
+  padding: 30px;
+  justify-self: center;
+  grid-column: 1 / span 2;
+}
+
+/*** TOOLTIP ***/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltipText {
+  visibility: hidden;
+  width: 80px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -40px;
+  background-color: black;
+  opacity: 0.7;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}
+
+/*** MEDIA QUERIES ***/
+@media screen and (min-width: 600px) {
+  .page-wrapper {
+    grid-template-columns: 50% 50%;
+  }
+
+  .moviePoster {
+    height: 160px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .moviePoster {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .moviePoster {
+    height: 250px;
+  }
+  .page-wrapper {
+    width: 95%;
+  }
+}
