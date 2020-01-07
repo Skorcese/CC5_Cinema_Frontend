@@ -5,8 +5,9 @@ import HomePage from '../Display/homePage/HomePage';
 import Contact from '../Display/contact/Contact';
 import Register from '../Display/register/Register';
 import Login from '../Display/login/Login';
-import MyTickets from '../Display/myTickets/MyTickets';
+import MyTickets from '../tickets/myTickets/MyTickets';
 import PriceList from '../Display/priceList/PriceList';
+import Reservation from '../tickets/reservation/Reservation';
 
 class Display extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class Display extends React.Component {
           <Route path="/login" exact component={Login} />
           <Route path="/mytickets" exact component={MyTickets} />
           <Route path="/pricelist" exact component={PriceList} />
+          <Route path="/reservation" component={Reservation} />
         </div>
       </Router>
     );
