@@ -17,7 +17,7 @@ const PriceList = () => {
       <div>Weekend</div>
 
       <div>Bilet normalny</div>
-      <div>15 xł</div>
+      <div>15 zł</div>
       <div>21 zł</div>
       <div>25 zł</div>
 

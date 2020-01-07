@@ -2,13 +2,30 @@ import React, { Component } from 'react';
 import './HomePage.css';
 import end from '../../../apis/index';
 import Photo from './Photo';
-import Footer from '../../Display/footer/Footer';
+import { movies } from './movies';
 
 class HomePage extends Component {
-  state = {
-    photosPro: [],
-    photosNew: []
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      photosPro: [],
+      photosNew: []
+    };
+
+    this.addFilms();
+  }
+
+  async addFilms() {
+    var getMovies = await end.get('api/movies');
+    console.log(getMovies);
+    if (
+      getMovies.data.length === 0 ||
+      getMovies.data.length === null ||
+      getMovies.data.length === undefined
+    )
+      movies.map(v => end.post('api/movies', v));
+  }
 
   async componentDidMount() {
     const photos = await end.get('api/movies');
