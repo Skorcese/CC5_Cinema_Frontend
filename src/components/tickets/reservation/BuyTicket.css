@@ -1,0 +1,61 @@
+.buyTicket-wrapper {
+  color: white;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 20px;
+  border: 2px solid gray;
+  border-radius: 2%;
+  padding: 30px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px white;
+  justify-items: stretch;
+}
+
+.buyTicket-wrapper label {
+  display: block;
+}
+
+.buyTicket-wrapper select {
+  display: block;
+  margin-top: 10px;
+  margin-left: 0;
+  width: 100%;
+}
+
+.buyTicket-wrapper .date-select {
+  display: block;
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+.submitBtn {
+  justify-self: center;
+  padding: 5px 50px;
+  background-color: gray;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px white;
+  border-style: groove;
+  cursor: pointer;
+}
+
+.afterSubmit {
+  justify-self: center;
+  text-shadow: 1px 1px 2px green;
+}
+
+.afterSubmit-invisible {
+  visibility: hidden;
+}
+
+.afterSubmit-visible {
+  visibility: visible;
+}
+
+.validSubmit {
+  color: green;
+}
+
+.invalidSubmit {
+  color: red;
+}
