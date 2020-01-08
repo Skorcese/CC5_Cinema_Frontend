@@ -17,15 +17,25 @@ const Register = () => {
       password
     }
 
-    const result = await end.post('api/users', obj)
+    try{
+      if(password != secondPw){
+        alert('Wprowadzone hasła muszą być takie same.')
+      }
+      if (name.length < 4 && surname.length < 4 && password.length < 6) {
+        alert('Imię i nazwisko musi mieć przynajmniej trzy znaki. Hasło musi mieć przynajmniej 5 znaków.')
+      } else {
+        const result = await end.post('api/users', obj)
+        console.log(result)
 
-    console.log(result)
-  }
-
-  const validateForm = () => {
-    if(name.length >= 3 && surname.length >= 3 && password.length >=5 && password === secondPw)
-      setActive()
-    return 
+        setName('')
+        setSurname('')
+        setEmail('')
+        setPassword('')
+        setSecondPw('')
+      }
+    } catch(err){
+      console.log(err)
+    }
   }
   
   return (
@@ -39,6 +49,7 @@ const Register = () => {
               <input
                 placeholder="Imię"
                 type="text"
+                value={name}
                 onChange={e => setName(e.target.value)}
               />
             </div>
@@ -47,6 +58,7 @@ const Register = () => {
               <input
                 placeholder="Nazwisko"
                 type="text"
+                value={surname}
                 onChange={e => setSurname(e.target.value)}
               />
             </div>
@@ -57,6 +69,7 @@ const Register = () => {
               <input
                 placeholder="E-mail"
                 type="email"
+                value={email}
                 onChange={e => setEmail(e.target.value)}
               />
             </div>
@@ -67,6 +80,7 @@ const Register = () => {
               <input
                 placeholder="Hasło"
                 type="password"
+                value={password}
                 onChange={e => setPassword(e.target.value)}
               />
             </div>
