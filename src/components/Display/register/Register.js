@@ -17,9 +17,13 @@ const Register = () => {
       password
     }
 
-    const result = await end.post('api/users', obj)
+    try{
+      const result = await end.post('api/users', obj)
+      console.log(result)
+    } catch(err){
+      console.log(err)
+    }
 
-    console.log(result)
   }
 
   const validateForm = () => {
