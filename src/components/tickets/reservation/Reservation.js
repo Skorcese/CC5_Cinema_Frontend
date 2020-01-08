@@ -8,8 +8,8 @@ class Reservation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //Temporarily hardcoded user id
-      user_id: '5e0a588e1f912e227c2099cf',
+      //Temporarily hardcoded user id 5e0a588e1f912e227c2099cf
+      user_id: window.localStorage.getItem('userId'),
       movie_id: '',
       movie: null
     };
@@ -19,7 +19,7 @@ class Reservation extends Component {
     const movie_id = await window.localStorage.getItem('movieId');
 
     //Save user_id in localStorage
-    window.localStorage.setItem('userId', this.state.user_id);
+    window.localStorage.setItem('user_id', this.state.user_id);
 
     this.setState({
       ...this.state,
@@ -34,27 +34,36 @@ class Reservation extends Component {
   }
 
   render() {
-    return (
-      <div className="page-wrapper">
-        {this.state.movie !== null ? (
-          <div>
-            <RenderMovie data={this.state.movie} />
-          </div>
-        ) : (
-          'film'
-        )}
-        {this.state.movie !== null ? (
-          <div>
-            <BuyTicket
-              movie_id={this.state.movie_id}
-              user_id={this.state.user_id}
-            />
-          </div>
-        ) : (
-          'film'
-        )}
-      </div>
-    );
+    if (this.state.user_id === '' || this.state.user_id === null) {
+      return (
+        <div className="page-wrapper">
+          <div className="logging-needed">Musisz się zalogować!</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="page-wrapper">
+          {this.state.movie !== null ? (
+            <div>
+              <RenderMovie data={this.state.movie} />
+            </div>
+          ) : (
+            'film'
+          )}
+
+          {this.state.movie !== null ? (
+            <div>
+              <BuyTicket
+                movie_id={this.state.movie_id}
+                user_id={this.state.user_id}
+              />
+            </div>
+          ) : (
+            'film'
+          )}
+        </div>
+      );
+    }
   }
 }
 

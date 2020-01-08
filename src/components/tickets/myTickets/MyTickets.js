@@ -7,15 +7,16 @@ class MyTickets extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //Temporarily hardcoded user id
-      userId: '5e0a588e1f912e227c2099cf',
+      //Temporarily hardcoded user id 5e0a588e1f912e227c2099cf
+      user_id: window.localStorage.getItem('userId'),
       reservations: []
     };
   }
 
   async componentDidMount() {
+    console.log(this.state.user_id);
     const reservations = await end.get(
-      `/api/reservation/${this.state.userId}/default`
+      `/api/reservation/${this.state.user_id}/default`
     );
     this.setState({
       ...this.state,
@@ -25,11 +26,20 @@ class MyTickets extends Component {
   }
 
   render() {
-    return (
-      <div className="page-wrapper">
-        <RenderMyTickets data={this.state.reservations} />
-      </div>
-    );
+    console.log(this.state.user_id);
+    if (this.state.user_id === '' || this.state.user_id === null) {
+      return (
+        <div className="page-wrapper">
+          <div className="logging-needed">Musisz się zalogować!</div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="page-wrapper">
+          <RenderMyTickets data={this.state.reservations} />
+        </div>
+      );
+    }
   }
 }
 
