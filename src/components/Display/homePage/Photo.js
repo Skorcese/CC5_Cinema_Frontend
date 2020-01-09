@@ -9,13 +9,14 @@ function reservation(props) {
 }
 
 const Photo = props => {
+
   return (
     <div>
       <div className="ui card">
         <div className="ui slide masked reveal image ins-img">
           <img
             className="ui medium circular image "
-            src={'/img/home/' + props.imageUrl}
+            src={process.env.PUBLIC_URL +'/img/home/' + props.imageUrl}
             alt="Home photo"
           />
         </div>

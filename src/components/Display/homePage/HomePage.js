@@ -36,10 +36,11 @@ class HomePage extends Component {
 
     console.log(photos.data);
   }
+  
   render() {
     return (
       <div>
-        <img className="jpg-home" src="/img/jumanji2.jpg" alt="Home photo" />
+        <img className="jpg-home" src={process.env.PUBLIC_URL +'/img/jumanji2.jpg'} alt="Home photo" />
         <br />
         <br />
         <hr />
