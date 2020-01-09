@@ -8,7 +8,6 @@ function reservation(props) {
 }
 
 const Photo = props => {
-
   return (
     <div>
       <Link
@@ -19,11 +18,7 @@ const Photo = props => {
         <div className="ui slide masked reveal image ins-img">
           <img
             className="ui medium circular image "
-<<<<<<< HEAD
             src={'/mini-kino/img/home/' + props.imageUrl}
-=======
-            src={process.env.PUBLIC_URL +'/img/home/' + props.imageUrl}
->>>>>>> 26cb950340bd3bfdb9a28a0ba6d67338f76eb52b
             alt="Home photo"
           />
         </div>
