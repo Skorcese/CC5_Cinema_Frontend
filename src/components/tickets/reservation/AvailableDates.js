@@ -156,7 +156,7 @@ class AvailableDates extends Component {
       // Fetch seat document in order to get proper '_id' field of it and use it as 'seat_id'
       // key in reservation POST req
       const seat = await fetch(
-        `http://127.0.0.1:3001/api/seats/${this.state.choosenRow}/${this.state.choosenSeat}`,
+        `https://mini-kino.herokuapp.com/api/seats/${this.state.choosenRow}/${this.state.choosenSeat}`,
         {
           method: 'GET'
         }
@@ -176,7 +176,7 @@ class AvailableDates extends Component {
       searchParams.append('screening_id', this.state.screening_id);
 
       const reservation = await fetch(
-        `http://127.0.0.1:3001/api/reservation/`,
+        `https://mini-kino.herokuapp.com/api/reservation/`,
         {
           method: 'POST',
           body: searchParams
