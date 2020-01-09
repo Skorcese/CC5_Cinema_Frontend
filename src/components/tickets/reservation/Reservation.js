@@ -8,7 +8,6 @@ class Reservation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //Temporarily hardcoded user id 5e0a588e1f912e227c2099cf
       user_id: window.localStorage.getItem('userId'),
       movie_id: '',
       movie: null

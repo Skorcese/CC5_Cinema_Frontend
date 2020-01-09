@@ -40,7 +40,7 @@ const RenderMyTickets = props => {
         >
           <img
             className="moviePoster"
-            src={`../../../img/home/${screening.movie_id.imageUrl}`}
+            src={`/mini-kino/img/home/${screening.movie_id.imageUrl}`}
             alt={screening.movie_id.title + ' poster'}
           />
           <div className="utils">

@@ -39,7 +39,11 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <img className="jpg-home" src="img/jumanji2.jpg" alt="Home photo" />
+        <img
+          className="jpg-home"
+          src="/mini-kino/img/jumanji2.jpg"
+          alt="Home photo"
+        />
         <br />
         <br />
         <hr />

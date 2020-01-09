@@ -128,9 +128,6 @@ class AvailableDates extends Component {
     e.preventDefault();
 
     // User input validation
-    console.log(this.state.choosenRow);
-    console.log(this.state.choosenSeat);
-    console.log(this.state);
     if (
       this.state.choosenRow === 'Wybierz rząd' ||
       this.state.choosenSeat === 'Wybierz miejsce'
@@ -163,12 +160,11 @@ class AvailableDates extends Component {
       );
 
       const parsedArr = await seat.json();
-      console.log(parsedArr);
+
       await this.setState({
         ...this.state,
         seat_id: parsedArr[0]._id
       });
-      console.log(this.state);
 
       const searchParams = new URLSearchParams();
       searchParams.append('user_id', this.state.user_id);

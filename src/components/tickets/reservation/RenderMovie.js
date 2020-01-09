@@ -13,7 +13,6 @@ function fullDescrAndTooltipText(refDescr, fullDescr, descr, refTooltip) {
 }
 
 const RenderMovie = props => {
-  console.log(props.data);
   const toRender = props.data.map(reservation => {
     let screening = {};
     let seat;
@@ -36,7 +35,7 @@ const RenderMovie = props => {
       >
         <img
           className="moviePoster"
-          src={`../../../img/home/${screening.movie_id.imageUrl}`}
+          src={`/mini-kino/img/home/${screening.movie_id.imageUrl}`}
           alt={screening.movie_id.title + ' poster'}
         />
         <div className="utils">

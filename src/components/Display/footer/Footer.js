@@ -30,14 +30,14 @@ class Footer extends Component {
             <div className="item">
               <img
                 className="footer-app-and"
-                src="../../../img/app-and.jpg"
+                src="/mini-kino/img/app-and.jpg"
                 alt="Android"
               />
             </div>
             <div className="item">
               <img
                 className="footer-app-ios"
-                src="../../../img/app-mob.jpg"
+                src="/mini-kino/img/app-mob.jpg"
                 alt="IOS"
               />
             </div>
@@ -47,9 +47,9 @@ class Footer extends Component {
         <div className="item">
           <h2>KONTAKT</h2>
           <div className="ui list">
-            <div className="item contact" onClick={this.sayHello}>
+            <Link to="/contact" className="item contact">
               Kontakt
-            </div>
+            </Link>
           </div>
         </div>
       </div>
