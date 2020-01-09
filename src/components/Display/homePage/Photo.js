@@ -15,7 +15,7 @@ const Photo = props => {
         <div className="ui slide masked reveal image ins-img">
           <img
             className="ui medium circular image "
-            src={'img/home/' + props.imageUrl}
+            src={'/img/home/' + props.imageUrl}
             alt="Home photo"
           />
         </div>
